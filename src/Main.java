@@ -37,7 +37,7 @@ public class Main {
                     } else if (choice.equals("sign")) {
                         System.out.print("> ");
                         String studentChoice = scanner.nextLine();
-                        if (studentList.containsValue(studentChoice)) {
+                        if (studentList.containsKey(studentChoice)) {
                             studentList.put(studentChoice, "Y");
                         }
 
