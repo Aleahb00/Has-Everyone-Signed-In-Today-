@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        List<String> names = new ArrayList<>();
+//        List<String> names = new ArrayList<>();
         HashMap<String, String> studentList = new HashMap<>();
 
         System.out.println("Please provide the student names and then q to quit");
@@ -37,7 +37,9 @@ public class Main {
                     } else if (choice.equals("sign")) {
                         System.out.print("> ");
                         String studentChoice = scanner.nextLine();
-                        studentList.put(studentChoice, "Y");
+                        if (studentList.containsValue(studentChoice)) {
+                            studentList.put(studentChoice, "Y");
+                        }
 
                     }
                     if (choice.equals("q")) {
